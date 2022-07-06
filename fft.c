@@ -21,10 +21,11 @@ void RFFT(int input[],ComplexNumber output[])
     for(level=1;level<=ORDER;level++)
     {
         butterflyWidth = 1<<(level-1);
-        for(buttterflyInsideIndex=0;buttterflyInsideIndex<butterflyWidth;buttterflyInsideIndex++)
+        butterflyCount = 1<<(ORDER-level);
+
+        for(butterflyIndex=0;butterflyIndex<butterflyCount;butterflyIndex++)
         {
-            butterflyCount = 1<<(ORDER-level);
-            for(butterflyIndex=0;butterflyIndex<butterflyCount;butterflyIndex++)
+            for(buttterflyInsideIndex=0;buttterflyInsideIndex<butterflyWidth;buttterflyInsideIndex++)
             {
                 index = buttterflyInsideIndex+2*butterflyWidth*butterflyIndex;
                 temp = ComplexMultiply(output[index+butterflyWidth],TwiddleFactor(buttterflyInsideIndex*butterflyCount));
