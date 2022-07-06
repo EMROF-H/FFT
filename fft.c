@@ -1,5 +1,7 @@
 #include "fft.h"
 
+#include "complex.c"
+
 void BinaryReverse(int array[]);
 
 void RFFT(int input[],ComplexNumber output[])

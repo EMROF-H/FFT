@@ -1,8 +1,8 @@
 #ifndef _FFT_H_
 #define _FFT_H_
 
-#include "system.h"
-#include "complexOperation.h"
+#include "complex.h"
+#include "define.h"
 
 void RFFT(int input[],ComplexNumber output[]);
 
