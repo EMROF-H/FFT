@@ -39,7 +39,6 @@ void BinaryReverse(int array[])
 {
     int index,bitIndex;
     int indexReverse,lowOperator,highOperator,low,high;
-    int temp;
 
 	for(index=0;index<LENGTH;index++)
 	{
@@ -72,9 +71,10 @@ void BinaryReverse(int array[])
 
 		if(index < indexReverse)
 		{
-            array[index]        = array[index] ^ array[indexReverse];
-            array[indexReverse] = array[index] ^ array[indexReverse];
-            array[index]        = array[index] ^ array[indexReverse];
+            int temp;
+            temp = array[index];
+            array[index] = array[indexReverse];
+            array[indexReverse] = temp;
 		}                                
 	}
 }
