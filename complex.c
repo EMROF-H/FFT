@@ -10,7 +10,7 @@ ComplexNumber ComplexAdd(ComplexNumber a,ComplexNumber b)
 {
     ComplexNumber result;
     result.real      = a.real+b.real;
-    result.imaginary = b.imaginary+a.imaginary;
+    result.imaginary = a.imaginary+b.imaginary;
     return result;
 }
 
@@ -18,7 +18,7 @@ ComplexNumber ComplexReduce(ComplexNumber a,ComplexNumber b)
 {
     ComplexNumber result;
     result.real      = a.real-b.real;
-    result.imaginary = b.imaginary-a.imaginary;
+    result.imaginary = a.imaginary-b.imaginary;
     return result;
 }
 
